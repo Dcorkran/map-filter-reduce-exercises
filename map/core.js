@@ -1,17 +1,33 @@
 function multiplyBy10 (array) {
- // your code here
+  var timesTen = array.map((num)=>{
+    return num *= 10;
+  });
+  return timesTen;
 };
 
 function shiftRight (array) {
- // your code here
+  var shiftedArray = array.map((value,index)=>{
+    return array[(index + array.length - 1) % array.length];
+  });
+  return shiftedArray;
 };
 
 function onlyVowels (array) {
- // your code here
+  var vowelArray = array.map((val)=>{
+    let vowels = /[^aeiou]/gi;
+    return val.replace(vowels,'');
+  });
+  return vowelArray;
 };
 
 function doubleMatrix (array) {
- // your code here
+  var doubleArray = array.map((num)=>{
+    var innerDoubleArray = num.map((element) =>{
+      return element *= 2;
+    });
+    return innerDoubleArray;
+  });
+  return doubleArray;
 };
 
 module.exports = {
