@@ -1,17 +1,34 @@
 function sum (array) {
-  // your code here
+  return array.reduce((a,b)=>{
+    return a+b;
+  },0);
 };
 
 function productAll (array) {
-  // your code here
+  array = array.reduce((a,b)=>{
+    return a.concat(b);
+  });
+  return array.reduce((a,b)=>{
+    return a*b;
+  });
 };
 
 function objectify (array) {
-  // your code here
+  return array.reduce((newObj,value)=>{
+    newObj[value[0]] = value[1];
+    return newObj;
+  },{});
 };
 
 function luckyNumbers (array) {
-  // your code here
+  let reducedArr = array.reduce((a,b,index)=>{
+    if (index === array.length - 1) {
+      return `${a}, and ${+b}`;
+    } else {
+      return `${a}, ${+b}`;
+    }
+  });
+  return `Your lucky numbers are: ${reducedArr}`;
 };
 
 module.exports = {

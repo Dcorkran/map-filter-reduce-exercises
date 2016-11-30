@@ -1,19 +1,19 @@
 function multiplyBy10 (array) {
-  var timesTen = array.map((num)=>{
+  let timesTen = array.map((num)=>{
     return num *= 10;
   });
   return timesTen;
 };
 
 function shiftRight (array) {
-  var shiftedArray = array.map((value,index)=>{
+  let shiftedArray = array.map((value,index)=>{
     return array[(index + array.length - 1) % array.length];
   });
   return shiftedArray;
 };
 
 function onlyVowels (array) {
-  var vowelArray = array.map((val)=>{
+  let vowelArray = array.map((val)=>{
     let vowels = /[^aeiou]/gi;
     return val.replace(vowels,'');
   });
@@ -21,8 +21,8 @@ function onlyVowels (array) {
 };
 
 function doubleMatrix (array) {
-  var doubleArray = array.map((num)=>{
-    var innerDoubleArray = num.map((element) =>{
+  let doubleArray = array.map((num)=>{
+    let innerDoubleArray = num.map((element) =>{
       return element *= 2;
     });
     return innerDoubleArray;
